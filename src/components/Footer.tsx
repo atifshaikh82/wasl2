@@ -49,8 +49,8 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li><Link to="/about" className="text-gray-400 hover:text-[#8cc63f] transition-colors text-sm">{t('nav.about')}</Link></li>
               <li><a href="/#portfolio" className="text-gray-400 hover:text-[#8cc63f] transition-colors text-sm">{t('nav.portfolio')}</a></li>
-              <li><a href="/#pricing" className="text-gray-400 hover:text-[#8cc63f] transition-colors text-sm">{t('nav.pricing')}</a></li>
-              <li><a href="/#contact" className="text-gray-400 hover:text-[#8cc63f] transition-colors text-sm">{t('footer.company.contact')}</a></li>
+              <li><Link to="/pricing" className="text-gray-400 hover:text-[#8cc63f] transition-colors text-sm">{t('nav.pricing')}</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-[#8cc63f] transition-colors text-sm">{t('footer.company.contact')}</Link></li>
             </ul>
           </div>
 
@@ -71,7 +71,10 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10 text-sm text-gray-500">
-          <p>{t('footer.rights')}</p>
+          <div className="flex flex-col gap-1 text-center md:text-left">
+            <p>{t('footer.rights')}</p>
+            <p>Wasl Tech is owned and operated by Parki Limited, United Kingdom</p>
+          </div>
           <div className="flex items-center gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">{t('footer.privacy')}</a>
             <a href="#" className="hover:text-white transition-colors">{t('footer.terms')}</a>

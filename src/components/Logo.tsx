@@ -9,12 +9,12 @@ export const Logo = ({ className = "" }: { className?: string }) => {
         <img 
           src="/logo.png" 
           alt="Wasl Logo" 
-          className="h-[58px] w-auto object-contain"
+          className="h-[61px] w-auto object-contain"
           onError={() => setHasError(true)}
         />
       ) : (
         <div className="flex items-center gap-2 text-[#8cc63f]">
-          <span className="text-[43px] font-bold tracking-tighter" style={{ fontFamily: 'system-ui, sans-serif' }}>
+          <span className="text-[61px] font-bold tracking-tighter leading-none" style={{ fontFamily: 'system-ui, sans-serif' }}>
             وصل
           </span>
         </div>

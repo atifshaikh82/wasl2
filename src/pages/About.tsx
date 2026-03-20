@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Target, Eye, Zap, Users, Shield, Rocket } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { useProjectModal } from '../context/ProjectModalContext';
 
 export const About = () => {
   const { t } = useLanguage();
+  const { openModal } = useProjectModal();
 
   const values = [
     {
@@ -33,7 +36,7 @@ export const About = () => {
     {
       name: t('about.t1.name'),
       role: t('about.t1.role'),
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400"
+      image: "/atif.png" // Please upload your image as 'atif.png' in the 'public' folder
     },
     {
       name: t('about.t2.name'),
@@ -170,12 +173,12 @@ export const About = () => {
           <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
             {t('about.cta.desc')}
           </p>
-          <a 
-            href="/#contact" 
+          <button 
+            onClick={openModal} 
             className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#8cc63f] text-[#050505] font-bold text-lg hover:bg-[#9ddb45] transition-colors shadow-[0_0_30px_rgba(140,198,63,0.3)]"
           >
             {t('about.cta.btn')}
-          </a>
+          </button>
         </motion.div>
       </section>
     </main>

@@ -65,25 +65,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-1">{t('contact.email')}</h4>
-                  <p className="text-lg font-medium text-white">hello@wasl.agency</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-6">
-                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10">
-                  <Phone className="w-6 h-6 text-[#8cc63f]" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-1">{t('contact.call')}</h4>
-                  <p className="text-lg font-medium text-white">+966 50 123 4567</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-6">
-                <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10">
-                  <MapPin className="w-6 h-6 text-[#8cc63f]" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-1">{t('contact.visit')}</h4>
-                  <p className="text-lg font-medium text-white">{t('contact.address')}</p>
+                  <p className="text-lg font-medium text-white">marhaba@wasltech.net</p>
                 </div>
               </div>
             </motion.div>

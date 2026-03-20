@@ -1,12 +1,15 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
+import { useProjectModal } from '../context/ProjectModalContext';
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const { openModal } = useProjectModal();
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-48 md:pt-32 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#8cc63f]/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" />
@@ -19,7 +22,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8"
+          className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8"
         >
           <Sparkles className="w-4 h-4 text-[#8cc63f]" />
           <span className="text-sm font-medium text-gray-300">{t('hero.badge')}</span>
@@ -50,14 +53,14 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex flex-col sm:flex-row items-center gap-4"
         >
-          <a
-            href="#contact"
+          <button
+            onClick={openModal}
             className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#8cc63f] text-[#050505] font-semibold text-lg overflow-hidden transition-all hover:scale-105"
           >
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
             {t('hero.cta1')}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform rtl:group-hover:-translate-x-1 rtl:rotate-180" />
-          </a>
+          </button>
           <a
             href="#services"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/5 text-white border border-white/10 font-semibold text-lg hover:bg-white/10 transition-colors"
